@@ -979,7 +979,7 @@
 	                            <div class="row">
 	                                <div class="col-md-12">
 	                                    <div class="form-group">
-	                                        <input id="form_name" type="text" name="name" placeholder="Name" required="required" data-error="Firstname is required.">
+	                                        <input id="form_name" type="text" name="name" [(ngModel)]="formsObj.name" placeholder="Name" required="required" data-error="Firstname is required.">
 	                                        <div class="help-block with-errors"></div>
 	                                    </div>
 	                                </div>
@@ -988,7 +988,7 @@
 	                            <div class="row">
 	                                <div class="col-md-12">
 	                                    <div class="form-group">
-	                                        <input id="form_email" type="email" name="email" placeholder="Email" required="required" data-error="Valid email is required.">
+	                                        <input id="form_email" type="email" name="email" [(ngModel)]="formsObj.email" placeholder="Email" required="required" data-error="Valid email is required.">
 	                                        <div class="help-block with-errors"></div>
 	                                    </div>
 	                                </div>
@@ -996,7 +996,7 @@
 	                            <div class="row">
 	                                <div class="col-md-12">
 	                                    <div class="form-group">
-	                                        <input id="form_subject" type="text" name="subject" placeholder="Subject">
+	                                        <input id="form_subject" type="text" name="subject" [(ngModel)]="formsObj.subject" placeholder="Subject">
 	                                        <div class="help-block with-errors"></div>
 	                                    </div>
 	                                </div>
@@ -1004,12 +1004,12 @@
 	                            <div class="row">
 	                                <div class="col-md-12">
 	                                    <div class="form-group">
-	                                        <textarea id="form_message" name="message" placeholder="Message" rows="4" required="required" data-error="Message."></textarea>
+	                                        <textarea id="form_message" name="message" [(ngModel)]="formsObj.message" placeholder="Message" rows="4" required="required" data-error="Message."></textarea>
 	                                        <div class="help-block with-errors"></div>
 	                                    </div>
 	                                </div>
 	                                <div class="col-sm-12">
-	                                    <input type="submit" name="send" value="Send message">
+	                                    <input type="submit" name="send" (click)="onSubmit()" value="Send message">
 	                                </div>
 	                            </div>
 	                        </div>
